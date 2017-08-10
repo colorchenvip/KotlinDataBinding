@@ -1,0 +1,65 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileVer
+    buildToolsVersion rootProject.ext.android.buildVer
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minVer
+        targetSdkVersion rootProject.ext.android.targetVer
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    dataBinding{
+        enabled = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    def android = rootProject.ext.android
+    def test = rootProject.ext.test
+    def router = rootProject.ext.router
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    //kotlin
+//    api "com.alibaba:arouter-annotation:${router.annotationVer}"
+    api "com.alibaba:arouter-api:${router.api}"
+//    api "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    //test
+    testApi "junit:junit:${test.junit}"
+    androidTestApi "com.android.support.test:runner:${test.runner}"
+    androidTestApi "com.android.support.test.espresso:espresso-core:${test.espresso}"
+
+    //ui
+    api "com.android.support:appcompat-v7:${android.buildVer}"
+    api "com.android.support:recyclerview-v7:${android.buildVer}"
+    api "com.android.support:design:${android.buildVer}"
+    api "com.android.support.constraint:constraint-layout:${android.constraintVer}"
+
+    //tools
+    api 'com.orhanobut:logger:2.1.1'
+    api 'android.arch.lifecycle:extensions:1.0.0-alpha8'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    api 'io.reactivex.rxjava2:rxjava:2.1.0'
+    api 'com.google.code.gson:gson:2.8.1'
+    api 'com.github.bumptech.glide:glide:4.0.0'
+    api 'org.greenrobot:eventbus:3.0.0'
+    api 'com.cocosw:bottomsheet:1.+@aar'
+    api 'jp.wasabeef:glide-transformations:2.0.2'
+    api 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+
+}
