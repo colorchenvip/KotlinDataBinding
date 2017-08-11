@@ -1,1 +1,1 @@
-include ':app', ':colorbase', ':colorstart'
+include ':app', ':colorbase', ':demo', ':splashlibrary', ':color_tools'

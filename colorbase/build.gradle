@@ -1,18 +1,20 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion rootProject.ext.android.compileVer
-    buildToolsVersion rootProject.ext.android.buildVer
-
+    compileSdkVersion Integer.parseInt(COMPILE_SDK_VERSION)
+    buildToolsVersion BUILDTOOLS_VERSION
 
     defaultConfig {
-        minSdkVersion rootProject.ext.android.minVer
-        targetSdkVersion rootProject.ext.android.targetVer
-        versionCode rootProject.ext.android.versionCode
-        versionName rootProject.ext.android.versionName
+        minSdkVersion Integer.parseInt(MIN_SDK_VERSION)
+        targetSdkVersion Integer.parseInt(TARGET_SDK_VERSION)
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
     }
     dataBinding{
         enabled = true
@@ -30,25 +32,22 @@ android {
 }
 
 dependencies {
-    def android = rootProject.ext.android
-    def test = rootProject.ext.test
-    def router = rootProject.ext.router
     api fileTree(dir: 'libs', include: ['*.jar'])
-
     //kotlin
-//    api "com.alibaba:arouter-annotation:${router.annotationVer}"
-    api "com.alibaba:arouter-api:${router.api}"
+    annotationProcessor "com.alibaba:arouter-compiler:${AROUTER_COMPILER_VERSION}"
+    api "com.alibaba:arouter-annotation:${AROUTER_ANNOTATION_VERSION}"
+    api "com.alibaba:arouter-api:${AROUTER_API_VERSION}"
 //    api "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     //test
-    testApi "junit:junit:${test.junit}"
-    androidTestApi "com.android.support.test:runner:${test.runner}"
-    androidTestApi "com.android.support.test.espresso:espresso-core:${test.espresso}"
+    testApi "junit:junit:${JUNIT_VERSION}"
+    androidTestApi "com.android.support.test:runner:${RUNNER_VERSION}"
+    androidTestApi "com.android.support.test.espresso:espresso-core:${ESPRESSO_VERSION}"
 
     //ui
-    api "com.android.support:appcompat-v7:${android.buildVer}"
-    api "com.android.support:recyclerview-v7:${android.buildVer}"
-    api "com.android.support:design:${android.buildVer}"
-    api "com.android.support.constraint:constraint-layout:${android.constraintVer}"
+    api "com.android.support:appcompat-v7:${SUPPORT_LIB_VERSION}"
+    api "com.android.support:recyclerview-v7:${SUPPORT_LIB_VERSION}"
+    api "com.android.support:design:${SUPPORT_LIB_VERSION}"
+    api "com.android.support.constraint:constraint-layout:${SUPPORT_LIB_CONSTRAINT_VERSION}"
 
     //tools
     api 'com.orhanobut:logger:2.1.1'

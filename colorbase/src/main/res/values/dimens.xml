@@ -1,0 +1,176 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <!--【框架大小】tab栏中，图标距离tab栏的上边距为8px-->
+    <dimen name="tab_bar_icon_topmargin">8px</dimen>
+    <!--【框架大小】标签栏字体大小20px-->
+    <dimen name="tab_bar_textsize">11sp</dimen>
+    <!--【框架大小】标签栏高度98px-->
+    <dimen name="tab_bar_height">104px</dimen>
+    <!--【框架大小】导航栏字体大小38px-->
+    <dimen name="navi_bar_textsize">19sp</dimen>
+
+    <!--【通用布局】内容区与页面的左右间距为20px，内容区中，文本与区域的左右间距为20px-->
+    <dimen name="page_horimargin">20px</dimen>
+    <dimen name="page_horizontal_40">40px</dimen>
+    <!--【框架大小】工具栏高为88px-->
+    <dimen name="navi_bar_height">96px</dimen>
+    <dimen name="tool_bar_height">88px</dimen>
+    <!--【文字大小】正文30px-->
+    <dimen name="normal_textsize">15sp</dimen>
+    <!--非正文性，页内标题、列表中的标题或需要突出的内容34px-->
+    <dimen name="imp_title_textsize">17sp</dimen>
+    <!--【分割线高度】分割线的高度1px-->
+    <dimen name="line_height">1px</dimen>
+    <!--<dimen name="toolbar_img_margin">20px</dimen>-->
+    <!--【按钮/浮层大小】文案＜4个字时，按钮宽度固定为150px-->
+    <dimen name="btn_width">150px</dimen>
+    <dimen name="btn_width_270">270px</dimen>
+    <dimen name="btn_height">50px</dimen>
+    <dimen name="btn_height_70">70px</dimen>
+
+    <!--【文字大小】提示类的文字或正文中不重要的文字，如日期等信息26px-->
+    <dimen name="tips_unimp_textsize">13sp</dimen>
+    <!--【翻页图标】圆点直径为10px-->
+    <dimen name="turnpage_width">10px</dimen>
+    <!--【图标与文字】内容区，图标与文字间的间距为15px-->
+    <dimen name="content_pic_text_margin">15px</dimen>
+    <!--Cell间距-->
+    <dimen name="cell_veti_sapce">8px</dimen>
+    <!--【通用布局】内容区与页面的上下间距为30px，内容区中，文本与区域的上下间距为30px-->
+    <dimen name="page_vertimargin">30px</dimen>
+    <dimen name="page_vertical_margin_15">15px</dimen>
+    <!--按钮/浮层/搜索框大小】按钮/浮层/搜索框中，图标和文案的间距为10px-->
+    <dimen name="btn_pic_text_margin">10px</dimen>
+
+
+    <!--个性化  msg图片-->
+    <dimen name="toolbar_imgsize">30px</dimen>
+    <dimen name="toolbar_img_width">44px</dimen>
+
+    <dimen name="msg_count_margintop">24px</dimen>
+    <dimen name="msg_count_margin">16px</dimen>
+
+    <dimen name="home_info_total_height">418px</dimen>
+    <dimen name="home_info_pic_margintop">60px</dimen>
+
+    <dimen name="toolbar_back_width">26px</dimen>
+    <dimen name="toolbar_back_height">44px</dimen>
+
+    <dimen name="toolbar_msgcountsize">10px</dimen>
+    <dimen name="home_info_size">360px</dimen>
+    <dimen name="home_info_charger_margin">400px</dimen>
+    <dimen name="home_info_txt_margin">30px</dimen>
+
+    <dimen name="home_info_picsize">114px</dimen>
+    <dimen name="home_info_picheight">136px</dimen>
+
+    <dimen name="home_line_width">6px</dimen>
+    <dimen name="home_line_height">32px</dimen>
+
+    <dimen name="home_car_textsize">16sp</dimen>
+
+    <dimen name="home_car_module_margintop">40px</dimen>
+    <dimen name="home_gray_line_height">15px</dimen>
+    <dimen name="home_car_margintop">15px</dimen>
+
+    <dimen name="home_title_Bar_back_width">100px</dimen>
+    <dimen name="select_car_edit_paddingleft">10px</dimen>
+    <dimen name="v_select_car_bottom_height">240px</dimen>
+    <dimen name="v_tab_pic_width">66px</dimen>
+
+    <dimen name="energy_common_bar_height">160px</dimen>
+
+    <dimen name="treeview_item_carpic_width">30px</dimen>
+    <dimen name="treeview_item_carpic_height">36px</dimen>
+
+    <dimen name="energy_switch_pic_width">40px</dimen>
+    <dimen name="small_loading_pic_width">30px</dimen>
+    <dimen name="small_load_failed_pic_width">32px</dimen>
+    <dimen name="path_viewpager_height">400px</dimen>
+    <dimen name="path_vp_close_width">30px</dimen>
+    <dimen name="path_seekbar_thumb_offset">10px</dimen>
+
+    <dimen name="energy_graph_mile_marginleft">50px</dimen>
+    <dimen name="energy_graph_line_marginbottom">80px</dimen>
+    <dimen name="energy_item_time_pic_width">32px</dimen>
+
+    <dimen name="common_load_failed_width">32px</dimen>
+    <dimen name="loading_big_width">52px</dimen>
+
+    <dimen name="loading_big_center_width">13px</dimen>
+    <dimen name="loading_big_center_height">17px</dimen>
+
+    <dimen name="load_failed_pic_width">50px</dimen>
+    <dimen name="load_failed_pic_height">56px</dimen>
+
+    <dimen name="v_bottom_pic_width">30px</dimen>
+    <dimen name="path_marker_direc_pic_width">52px</dimen>
+    <dimen name="select_car_pop_minheight">250px</dimen>
+    <dimen name="select_Car_treeview_item_height">110px</dimen>
+
+    <dimen name="home_module_pic_width">90px</dimen>
+    <dimen name="home_module_pic_height">90px</dimen>
+
+    <dimen name="login_edit_pic_paddingleft">18px</dimen>
+    <dimen name="login_logo_pic_margin_top">290px</dimen>
+    <dimen name="login_edit_margin_app_name">162px</dimen>
+    <dimen name="login_btn_width">500px</dimen>
+    <dimen name="login_edit_height">96px</dimen>
+    <dimen name="login_edit_radius">6px</dimen>
+    <dimen name="login_edit_margin">50px</dimen>
+    <dimen name="login_edit_txtsize">17sp</dimen>
+    <dimen name="login_edit_margintop">40px</dimen>
+    <dimen name="login_btn_height">90px</dimen>
+    <dimen name="login_btn_margin">125px</dimen>
+    <dimen name="login_btn_margintop">80px</dimen>
+    <dimen name="login_btn_txtsize">22sp</dimen>
+
+    <dimen name="treeview_item_checkbox_width">43px</dimen>
+    <dimen name="treeview_item_margin_to_parent">20px</dimen>
+
+    <dimen name="select_car_arrow_width">31px</dimen>
+    <dimen name="select_car_arrow_height">19px</dimen>
+
+    <dimen name="select_car_pop_delete_width">30px</dimen>
+    <dimen name="select_car_pop_delete_height">28px</dimen>
+
+    <dimen name="seekbar_play_pic_width">36px</dimen>
+    <dimen name="seekbar_play_pic_height">48px</dimen>
+
+    <dimen name="select_car_pick_width">30px</dimen>
+    <dimen name="select_car_pick_height">26px</dimen>
+
+    <dimen name="toggle_btn_width">80px</dimen>
+    <dimen name="toggle_btn_height">50px</dimen>
+
+    <dimen name="newuser_guide_width">593px</dimen>
+    <dimen name="newsuer_guide_height">307px</dimen>
+
+    <dimen name="energy_newuser_guide_margintop">160px</dimen>
+    <dimen name="energy_newsuer_guide_marginleft">15px</dimen>
+
+    <!--以下是以后需要修改的尺寸，现在不用管-->
+    <dimen name="table_default_text_size">16sp</dimen>
+    <dimen name="table_default_title_size">14sp</dimen>
+    <dimen name="table_left_title_width">80dp</dimen>
+    <dimen name="table_top_title_height">36dp</dimen>
+    <dimen name="table_default_margin_top">0dp</dimen>
+    <dimen name="table_top_title_place">48dp</dimen>
+    <dimen name="table_item_height">30dp</dimen>
+    <dimen name="table_item_width">80dp</dimen>
+    <dimen name="table_item_margin">0dp</dimen>
+    <dimen name="table_header_circle_radius">4dp</dimen>
+    <dimen name="table_header_indicator_width">8dp</dimen>
+    <dimen name="login_title_txtsize">21sp</dimen>
+    <dimen name="login_title_margin_top">185px</dimen>
+    <dimen name="dialog_vertical_margin">40px</dimen>
+    <dimen name="dialog_btn_height">80px</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="treeview_item_chargerpic_height">26px</dimen>
+    <dimen name="treeview_item_chargerpic_width">28px</dimen>
+    <dimen name="treeview_choix_height">70px</dimen>
+
+</resources>

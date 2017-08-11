@@ -1,23 +1,25 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
+kapt {
+    arguments {
+        arg("moduleName", project.getName())
+    }
+}
+
 android {
-    compileSdkVersion 26
-    buildToolsVersion rootProject.ext.android.buildVer
+    compileSdkVersion Integer.parseInt(COMPILE_SDK_VERSION)
+    buildToolsVersion BUILDTOOLS_VERSION
     defaultConfig {
-        applicationId rootProject.ext.android.applicationId
-        minSdkVersion rootProject.ext.android.minVer
-        targetSdkVersion rootProject.ext.android.targetVer
-        versionCode rootProject.ext.android.versionCode
-        versionName rootProject.ext.android.versionName
+        applicationId APPLICATION_ID
+        minSdkVersion Integer.parseInt(MIN_SDK_VERSION)
+        targetSdkVersion Integer.parseInt(TARGET_SDK_VERSION)
+        versionCode Integer.parseInt(VERSION_CODE)
+        versionName VERSION_NAME
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [moduleName: project.getName()]
-            }
-        }
     }
     buildTypes {
         release {
@@ -42,16 +44,17 @@ android {
 }
 
 dependencies {
-    def router = rootProject.ext.router
-    annotationProcessor "com.alibaba:arouter-compiler:${router.compiler}"
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation project(':colorbase')
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.1'
-    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
-    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    annotationProcessor "com.alibaba:arouter-compiler:${AROUTER_COMPILER_VERSION}"
+    kapt "com.alibaba:arouter-compiler:${AROUTER_COMPILER_VERSION}"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:${KOTLIN_VERSION}"
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:${LEAKCANARY_VERSION}"
+    releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:${LEAKCANARY_VERSION}"
+    testImplementation "com.squareup.leakcanary:leakcanary-android-no-op:${LEAKCANARY_VERSION}"
     implementation 'com.facebook.stetho:stetho:1.5.0'
-    implementation project(':colorstart')
+    implementation project(':colorbase')
+    implementation project(':demo')
+    implementation project(':splashlibrary')
 }
 repositories {
     mavenCentral()

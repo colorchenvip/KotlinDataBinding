@@ -7,4 +7,5 @@ package com.colorchen.lib.base.router;
  */
 public class RouterMap {
     public static final String SPLASH = "/start/splash";
+    public static final String DEMO_MAIN = "/demo/main";
 }

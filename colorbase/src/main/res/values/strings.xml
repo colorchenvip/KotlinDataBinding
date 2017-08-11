@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ColorBase</string>
+    <string name="load_no_data_text">没有数据</string>
+    <string name="load_net_error_text">网络不可用，请检查网络</string>
+
+    <string name="login_failed">用户登录失败，请确认输入正确</string>
+    <string name="do_login">正在登录...</string>
+    <string name="tip_loading_text">加载中...</string>
 </resources>

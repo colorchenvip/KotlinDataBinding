@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--主题色，多用于导航栏背景色、标签栏字体选中色-->
+    <color name="primary_color">#0a285a</color>
+    <!--//【按钮颜色】多用于按钮#1abc9c-->
+    <color name="sub_color">#1bbc9c</color>
+    <!--//多用于画布的颜色#f9f9f8-->
+    <color name="canvas_color">#f9f9f8</color>
+    <!--//多用于内容区的背景颜色-->
+    <color name="content_bgcolor">#ffffff</color>
+    <!--【文字颜色】次要或提示性文字#8e8e8e-->
+    <color name="tips_textcolor">#8e8e8e</color>
+    <!-- 多用于一般等级的图标或文字-->
+    <color name="fault_color">#ffa200</color>
+    <!-- //大多数分割线的颜色-->
+    <color name="line_color">#c8c7cc</color>
+    <!-- //【列表背景】选中态的背景色-->
+    <color name="item_pressed_color">#eeeeee</color>
+    <!-- //【列表背景】未选中态的背景色-->
+    <color name="item_unpressed_color">#ffffff</color>
+    <!-- //标签栏的背景色-->
+    <color name="tab_bar_bgcolor">#f7f7f7</color>
+    <!--//标签栏的上边线颜色 ？-->
+    <color name="line_deeper_color">#c8c7cc</color>
+    <!-- //突出明显边界的分割线颜色-->
+    <color name="line_deepest_color">#8f8f8f</color>
+    <!--【全页加载1/气泡提示1】背景颜色为#ffeccc-->
+    <color name="tips_bgcolor">#ffeccc</color>
+    <!--//【浮层】浮层背景不透明度为70%-->
+    <color name="float_bgcolor_transparency">#a5000000</color>
+    <!--//【翻页图标】当前页的颜色为#8e8e8e-->
+    <color name="current_page_dotcolor">#8e8e8e</color>
+    <!-- //【翻页图标】非当前页的颜色为#d8d6d6-->
+    <color name="not_current_page_dotcolor">#d8d6d6</color>
+    <!--个性化-->
+    <color name="path_loading_bg">#ffeccc</color>
+    <color name="energy_btn_pressed_color">#951abc9c</color>
+    <color name="login_btn_bg">#0160b4</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color_red_bg">#FF3030</color>
+    <color name="main_title_color">#f2f2f2</color>
+    <color name="gray_btn_color">#e5e5e5</color>
+
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data >
+        <import type="android.view.View"/>
+        <variable
+            name="loadStateModel"
+            type="com.colorchen.lib.base.state.LoadStateModel"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/content_bgcolor"
+        android:onClick="@{()->loadStateModel.reload()}"
+        android:visibility="@{loadStateModel.init?View.VISIBLE:View.GONE}"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/loadingIconLl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/loadingIconInnerRl"
+                android:layout_width="wrap_content"
+                android:visibility="@{loadStateModel.progress?View.VISIBLE:View.GONE}"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/loadingProBar"
+                    android:layout_width="@dimen/loading_big_width"
+                    android:layout_height="@dimen/loading_big_width"
+                    android:indeterminateBehavior="repeat"
+                    android:indeterminateDrawable="@drawable/loadmore_footer_animated_rotate_big"
+                    android:indeterminateOnly="true" />
+
+                <ImageView
+                    android:layout_width="@dimen/loading_big_center_width"
+                    android:layout_height="@dimen/loading_big_center_height"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/loadding_big_center" />
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/loadingFailureIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="@{loadStateModel.netError?View.VISIBLE:View.GONE}"
+                android:background="@drawable/retry_load"/>
+
+            <TextView
+                android:id="@+id/loadingStateTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/page_vertical_margin_15"
+                android:text="@{loadStateModel.currentStateLabel}"
+                android:textColor="@color/tips_textcolor"
+                android:textSize="@dimen/normal_textsize" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
+

@@ -4,8 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ColorChen.iml" filepath="$PROJECT_DIR$/ColorChen.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/color_tools/color_tools.iml" filepath="$PROJECT_DIR$/color_tools/color_tools.iml" />
       <module fileurl="file://$PROJECT_DIR$/colorbase/colorbase.iml" filepath="$PROJECT_DIR$/colorbase/colorbase.iml" />
-      <module fileurl="file://$PROJECT_DIR$/colorstart/colorstart.iml" filepath="$PROJECT_DIR$/colorstart/colorstart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/splashlibrary/splashlibrary.iml" filepath="$PROJECT_DIR$/splashlibrary/splashlibrary.iml" />
     </modules>
   </component>
 </project>
